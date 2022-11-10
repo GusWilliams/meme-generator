@@ -61,46 +61,47 @@ input {
 .meme-button:active {
 	opacity: 0.6;
 }
-.delete-button {
-	background-color: rgb(2, 126, 209);
-	border-color: rgb(0, 81, 135);
-	border-style: solid;
-	border-width: 1px;
-	color: rgb(0, 0, 0);
-	border-radius: 2px;
-	cursor: pointer;
-	padding-top: 20px;
-	padding-bottom: 20px;
-
-	transition: background-color 0.5s, color 0.5s;
-}
-
-.delete-button:hover {
-	background-color: rgb(0, 153, 255);
-	color: rgb(0, 0, 0);
-}
-
-.delete-button:active {
-	opacity: 0.8;
-}
 
 img {
 	height: 260px;
 	width: 300px;
 	object-fit: cover;
 	border: 2px solid gray;
-	border-radius: 4%;
+	border-radius: 10px;
 }
 .memeImg {
 	position: relative;
 	display: inline-block;
 	margin: 0.5%;
+	overflow: hidden;
+}
+.delete-button {
+	width: 300px;
+	height: 260px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: none;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	top: 280px;
+	color: rgba(223, 10, 10, 0.7);
+	font-size: 70px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	text-align: center;
+	background: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+	transition: top 500ms;
+}
+
+.memeImg:hover .delete-button {
+	top: 0px;
 }
 
 .memeTop {
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	font-size: 25px;
+	font-size: 27px;
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	text-shadow: -2px -2px 3px black;
 	position: absolute;
@@ -112,7 +113,7 @@ img {
 .memeBottom {
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	font-size: 25px;
+	font-size: 27px;
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	text-shadow: 2px 2px 3px black;
 	position: absolute;

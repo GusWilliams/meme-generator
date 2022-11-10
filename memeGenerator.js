@@ -19,14 +19,14 @@ function memeGenerator(e) {
 	topDiv.append(top);
 	bottomDiv.append(bottom);
 	imgDiv.append(image, bottomDiv, topDiv);
+	const deleteBtn = document.createElement("button");
+	deleteBtn.innerText = "X";
+	deleteBtn.classList.add("delete-button");
+	imgDiv.append(deleteBtn);
+	deleteBtn.addEventListener("click", deleteMeme);
 	form.reset();
 }
 
-let memeDelete = document.querySelector(".delete-button");
-memeDelete.addEventListener("click", deleteMeme);
 function deleteMeme(e) {
-	const last = Array.from(document.querySelectorAll(".memeImg")).pop();
-	if (e) {
-		last.remove();
-	}
+	e.target.parentElement.remove();
 }
